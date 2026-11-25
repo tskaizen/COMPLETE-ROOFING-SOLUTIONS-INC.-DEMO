@@ -133,7 +133,16 @@ ul, ol { margin: 0; padding: 0; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(33, 38, 64, 0.88) 0%, rgba(33, 38, 64, 0.6) 45%, rgba(33, 38, 64, 0.15) 100%); }
 @media (max-width: 959px) { .hero::after { background: linear-gradient(180deg, rgba(33, 38, 64, 0.78), rgba(33, 38, 64, 0.62)); } }
 .hero .wrap { display: grid; gap: 2.5rem; padding-top: 4rem; padding-bottom: 4.5rem; align-items: center; }
-@media (min-width: 960px) { .hero .wrap { padding-top: 6rem; padding-bottom: 8rem; } }
+@media (min-width: 960px) { .hero .wrap { grid-template-columns: 1.3fr minmax(19rem, 22rem); gap: 3rem; padding-top: 4.5rem; padding-bottom: 5rem; } }
+.form.hero-form { gap: 0.625rem; background: #fff; color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); }
+.hero-form h2 { font-size: 1.375rem; color: var(--ink); }
+.hero-form .form__note { margin-top: -0.25rem; }
+.hero-form .field { gap: 0.2rem; }
+.hero-form .field > span { font-size: 0.9375rem; }
+.hero-form .field input, .hero-form .field select { min-height: 42px; padding: 0.5rem 0.875rem; }
+.hero-form .field textarea { min-height: 4rem; padding: 0.5rem 0.875rem; }
+.hero-form .btn { width: 100%; justify-content: center; }
+@media (min-width: 960px) { .hero-form { justify-self: end; width: 100%; } }
 .hero__copy { display: grid; gap: 1.5rem; max-width: 40rem; }
 .hero h1 { color: #fff; }
 .hero h1 em { font-style: normal; color: var(--sand); }
