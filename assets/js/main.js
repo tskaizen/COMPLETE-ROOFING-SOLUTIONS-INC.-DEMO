@@ -60,10 +60,10 @@ if ("IntersectionObserver" in window && !reduceMotion) {
   revealTargets.forEach((el) => el.classList.add("is-in"));
 }
 
-/* ---------- Hero video: only load on wider screens with motion allowed ---------- */
+/* ---------- Hero video: plays on all screens unless the visitor prefers reduced motion ---------- */
 const vid = document.querySelector(".hero__video");
 if (vid) {
-  if (reduceMotion || window.matchMedia("(max-width: 640px)").matches) {
+  if (reduceMotion) {
     vid.remove();
   } else {
     const src = vid.dataset.src;
